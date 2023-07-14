@@ -15,7 +15,6 @@ namespace MoodAnalyserTest
         {
             string Result = moodAnalyse.AnalyseMood("I am in Sad Mood");
             Assert.AreEqual(Result, "Sad");
-
         }
     }
 
