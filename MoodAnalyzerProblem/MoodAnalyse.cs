@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static MoodAnalyzerProblem.MoodAnalyseCustom_Exception;
 
 namespace MoodAnalyzerProblem
 {
@@ -17,6 +18,7 @@ namespace MoodAnalyzerProblem
         {
             try
             {
+                //My name is Sad
                 if (message.Contains("Sad"))
                 {
                     return "Sad";
@@ -28,7 +30,8 @@ namespace MoodAnalyzerProblem
             }
             catch (NullReferenceException)
             {
-                return "Happy";
+                // return "Happy";
+                throw new MoodAnalyseCustom_Exception("Message should not be null", MoodAnalyser_ExceptionType.NULL_MOOD);
             }
         }
     }
